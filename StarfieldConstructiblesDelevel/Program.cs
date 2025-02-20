@@ -12,7 +12,7 @@ namespace StarfieldConstructiblesDelevel
         {
             return await SynthesisPipeline.Instance
                 .AddPatch<IStarfieldMod, IStarfieldModGetter>(RunPatch)
-                .SetTypicalOpen(GameRelease.Starfield, "DeleveledConstructibles.esm")
+                .SetTypicalOpen(GameRelease.Starfield, "YourPatcher.esp")
                 .Run(args);
         }
 
