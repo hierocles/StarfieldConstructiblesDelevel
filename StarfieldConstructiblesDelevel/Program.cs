@@ -12,7 +12,7 @@ namespace StarfieldConstructiblesDelevel
         {
             return await SynthesisPipeline.Instance
                 .AddPatch<IStarfieldMod, IStarfieldModGetter>(RunPatch)
-                .SetTypicalOpen(GameRelease.Starfield, "YourPatcher.esp")
+                .SetTypicalOpen(GameRelease.Starfield, "DeleveledConstructibles.esm")
                 .Run(args);
         }
 
@@ -24,7 +24,7 @@ namespace StarfieldConstructiblesDelevel
                 {
                     continue;
                 }
-                
+
                 foreach (var cobjGetterCondition in cobjGetter.Conditions)
                 {
                     if (cobjGetterCondition is not { Data: IGetLevelConditionDataGetter refData } ||
